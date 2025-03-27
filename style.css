@@ -1,0 +1,425 @@
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    font-size: 95%;
+}
+
+.logo-img {
+    width: 360px; /* Defina a largura desejada */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: var(--bg);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 2200px;
+}
+
+header {
+    position: relative;
+    top: -95px;
+    left: 0;    
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);  
+    height: 320px;
+    background-color: var(--bg);
+}
+
+header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.navbar a {
+    margin:0 1rem ;
+    font-size: 2.8rem;
+    color: #ffffff;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+}
+
+.icons img {
+    width: 60px;
+    height: 60px;
+    margin: 1rem;
+    position: relative;
+    left: 500px;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: var(--main-color);
+    color: #ffffff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+}
+.home-container{
+    background: url("./IMG/cafe.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-top: 50px;   
+}
+
+.home-container span{
+    color: #d3ad7f;
+}
+
+.home-container section{
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.content{
+    max-width: 60rem;
+}
+
+.content h3{
+    color: #ffffff;
+    font-size: 5rem;
+}
+
+.content p{
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.title{
+    font-size: 4rem;
+    color:var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem; 
+}
+
+.title span{
+    color: #ffffff;
+    text-transform: uppercase;
+}    
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background-color: var(--bg);
+    gap: 3.5rem;
+}
+
+.about .row .content{
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.about .row .content p{
+    font-size:  1.6rem;
+    color: #ffffff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+}
+
+.menu .box-container .box img{
+    height: 10rem;
+}
+
+.menu .box-container .box h3{
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price{
+    color: white;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font: lighter;
+}
+
+.menu .box-container .box:hover{
+    background-color: white;
+}
+
+.menu .box-container .box:hover>*{
+    color: var(--black);
+}
+
+.review .box-container .box{
+    border: var(--border);
+    text-align: center;
+    padding: 8rem 4rem;
+}
+
+.review .box-container .box p{
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 2rem 0;
+    line-height: 1.8;
+}
+
+.review .box-container .box h3{
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.review .box-container .box .user{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}   
+
+.address{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+    
+.footer{
+    text-align: center;
+}
+
+.footer .share{
+    padding: 1rem 0;
+}
+
+.footer .share img{
+    margin: 0.3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.footer .share img:hover{
+    background-color: var(--main-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos para o menu em telas maiores */
+.navbar {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Media Queries para Responsividade */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+    :root {
+        font-size: 93%;
+    }
+    .logo-img {
+        width: 150px;
+    }
+    header {
+        height: 280px;
+        top: -80px;
+    }
+    .icons img {
+        left: auto;
+        margin: 1rem 0.5rem;
+    }
+    .navbar a {
+        font-size: 2.5rem;
+        margin: 0 0.8rem;
+    }
+    .content h3 {
+        font-size: 4rem;
+    }
+    .content p {
+        font-size: 2rem;
+    }
+}
+
+/* Celulares e telas pequenas */
+@media (max-width: 768px) {
+    :root {
+        font-size: 90%;
+    }
+    header {
+        height: 240px;
+        top: -60px;
+    }
+    .navbar {
+        display: none;
+    }
+    .navbar a {
+        font-size: 2rem;
+        margin: 0.5rem 0;
+    }
+    .icons {
+        display: flex;
+        justify-content: center;
+    }
+    .icons img {
+        width: 25px;
+        height: 25px;
+        left: auto;
+    }
+    .home-container section {
+        flex-direction: column;
+        padding: 0rem  3rem;
+    }
+    .content h3 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .content p {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .menu .box-container .box {
+        padding: 3rem;
+    }
+    .review .box-container .box {
+        padding: 4rem 2rem;
+    }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 480px) {
+     
+    :root {
+        font-size: 60%;
+    }
+    header {
+        height: 150px;
+        top: -40px;
+    }
+    .navbar a {
+        font-size: 1.8rem;
+    }
+    .content h3 {
+        font-size: 2.5rem;
+        height: 70px;
+    }
+    .content p {
+        font-size: 1.5rem;
+    }
+    .menu .box-container .box {
+        padding: 2rem;
+    }
+    .review .box-container .box {
+        padding: 3rem 1rem;
+    }
+
+    .footer .share img {
+        width: 30px;
+        height: 30px;
+        display: center;
+        padding: 0,5rem;
+    }
+    
+    .address {
+        padding: 1rem 0;
+        width: 1px;
+    }
+    .footer {
+        padding: 0rem 0.5rem;
+    }
+    .home-container {
+        margin-top: 0px;
+        margin-bottom: -235px;
+    }
+
+    
+        
+    
+    
+    .container-image {
+        width: 0rem;
+        margin-top: -37rem;
+    }
+    
+
+    .container-image img {
+        width: 37rem;
+        margin-top: 107rem;
+        margin-bottom: 3rem;
+    }
+
+    .about .row {
+        gap: 0rem;
+    }
+
+    .about .row .content {
+        margin-top: -33rem;
+    }
+
+    .address iframe {
+        width: 40rem;
+        height: 15rem;
+        position: relative;
+        align-items: center;
+        
+    }
+}   
+
+
+
+
