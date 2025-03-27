@@ -315,6 +315,7 @@ html {
     .icons {
         display: flex;
         justify-content: center;
+        position: fixed;
     }
     .icons img {
         width: 25px;
