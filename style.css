@@ -332,7 +332,6 @@ html {
     }
     .content p {
         font-size: 1.8rem;
-        text-align: center;
     }
     .menu .box-container .box {
         padding: 3rem;
@@ -357,7 +356,10 @@ html {
     }
     .content h3 {
         font-size: 2.5rem;
-        height: 70px;
+    }
+
+    .about .row .content h3 {
+        display: none;
     }
     .content p {
         font-size: 1.5rem;
@@ -387,10 +389,7 @@ html {
         margin-top: 0px;
         margin-bottom: -235px;
     }
-
-    
-        
-    
+  
     
     .container-image {
         width: 0rem;
